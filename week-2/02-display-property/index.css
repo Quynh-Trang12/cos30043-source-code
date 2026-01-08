@@ -1,0 +1,319 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: #f5576c;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+h3 {
+  color: #666;
+  margin: 20px 0 10px 0;
+  font-size: 1.2em;
+}
+
+.example {
+  margin-bottom: 40px;
+  padding: 25px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #f5576c;
+}
+
+.note {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff3cd;
+  border-left: 3px solid #ffc107;
+  font-style: italic;
+  color: #856404;
+}
+
+/* Example 1: Block Elements */
+.block-demo {
+  margin: 15px 0;
+}
+
+.block {
+  display: block;
+  background-color: #4a90e2;
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.block:hover {
+  background-color: #357abd;
+  transform: translateX(10px);
+}
+
+/* Inline Elements */
+.inline-demo {
+  margin: 15px 0;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.inline {
+  display: inline;
+  background-color: #50c878;
+  color: white;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.inline:hover {
+  background-color: #3da85f;
+}
+
+/* Example 2: Inline-Block Elements */
+.inline-block-demo {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  vertical-align: top;
+  transition: all 0.3s ease;
+}
+
+.inline-block:nth-child(1) {
+  width: 100px;
+}
+
+.inline-block:nth-child(2) {
+  width: 150px;
+}
+
+.inline-block:nth-child(3) {
+  width: 120px;
+}
+
+.inline-block:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* Example 3: Hiding Elements */
+.hiding-demo {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.box-visible,
+.box-hidden,
+.box-none {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.box-visible {
+  display: block;
+  background-color: #95e1d3;
+  color: #333;
+}
+
+.box-hidden {
+  visibility: hidden;
+  background-color: #feca57;
+  color: #333;
+}
+
+.box-none {
+  display: none;
+  background-color: #ff6b81;
+  color: white;
+}
+
+.toggle-btn {
+  margin-top: 15px;
+  padding: 12px 30px;
+  background-color: #f5576c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn:hover {
+  background-color: #d63447;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn:active {
+  transform: translateY(0);
+}
+
+/* Example 4: Flex Display */
+.flex-demo {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.flex-item {
+  flex: 1;
+  background-color: #a29bfe;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.flex-item:hover {
+  background-color: #6c5ce7;
+  transform: translateY(-5px);
+}
+
+/* Example 5: Grid Display */
+.grid-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.grid-item {
+  background-color: #fd79a8;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+  background-color: #e84393;
+  transform: scale(1.05);
+}
+
+/* Example 6: Navigation Menu */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d3436;
+  padding: 15px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-item a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-item a:hover {
+  background-color: #f5576c;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .flex-demo {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .inline-block-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inline-block {
+    width: 100% !important;
+    max-width: 250px;
+  }
+}

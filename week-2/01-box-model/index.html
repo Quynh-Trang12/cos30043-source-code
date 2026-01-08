@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>CSS Box Model Demo</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Box Model Demonstration</h1>
+
+      <!-- Example 1: Basic Box Model -->
+      <section class="example">
+        <h2>Example 1: Basic Box Model</h2>
+        <div class="box box-1">
+          <p>This box demonstrates the CSS Box Model with:</p>
+          <ul>
+            <li>Content: This text and list</li>
+            <li>Padding: 20px (space inside the border)</li>
+            <li>Border: 5px solid border</li>
+            <li>Margin: 30px (space outside the border)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Example 2: Different Box Sizes -->
+      <section class="example">
+        <h2>Example 2: Comparing Different Box Configurations</h2>
+        <div class="box-comparison">
+          <div class="box box-small">
+            Small Box<br />
+            Width: 150px<br />
+            Padding: 10px
+          </div>
+          <div class="box box-medium">
+            Medium Box<br />
+            Width: 200px<br />
+            Padding: 20px
+          </div>
+          <div class="box box-large">
+            Large Box<br />
+            Width: 250px<br />
+            Padding: 30px
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 3: Box-Sizing Property -->
+      <section class="example">
+        <h2>Example 3: box-sizing Property</h2>
+        <p>
+          The box-sizing property affects how total width/height is calculated.
+        </p>
+
+        <div class="box-sizing-demo">
+          <div class="box box-content-box">
+            <strong>content-box (default)</strong><br />
+            Width = content only<br />
+            Total width = 200px + 20px padding + 5px border = 250px
+          </div>
+          <div class="box box-border-box">
+            <strong>border-box</strong><br />
+            Width = content + padding + border<br />
+            Total width = 200px (includes everything)
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 4: Margin Collapse -->
+      <section class="example">
+        <h2>Example 4: Margin Collapse</h2>
+        <p>
+          Vertical margins between adjacent elements collapse to the larger
+          margin.
+        </p>
+
+        <div class="box margin-top-30">Box 1: margin-bottom: 30px</div>
+        <div class="box margin-bottom-20">
+          Box 2: margin-top: 20px<br />
+          (Actual gap is 30px, not 50px)
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

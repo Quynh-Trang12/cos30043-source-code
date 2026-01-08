@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Bootstrap Grid System Demo</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="text-center mb-5">Bootstrap 5 Grid System</h1>
+
+      <!-- Example 1: Basic Grid -->
+      <section class="example-section">
+        <h2>Example 1: Basic 12-Column Grid</h2>
+        <p class="description">
+          Bootstrap uses a 12-column grid system. Columns should add up to 12.
+        </p>
+
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col-4">
+              <div class="demo-box">col-4</div>
+            </div>
+            <div class="col-8">
+              <div class="demo-box">col-8</div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-6">
+              <div class="demo-box">col-6</div>
+            </div>
+            <div class="col-6">
+              <div class="demo-box">col-6</div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-3">
+              <div class="demo-box">col-3</div>
+            </div>
+            <div class="col-3">
+              <div class="demo-box">col-3</div>
+            </div>
+            <div class="col-3">
+              <div class="demo-box">col-3</div>
+            </div>
+            <div class="col-3">
+              <div class="demo-box">col-3</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 2: Equal Width Columns -->
+      <section class="example-section">
+        <h2>Example 2: Equal Width Columns</h2>
+        <p class="description">
+          Use <code>col</code> without a number for equal-width columns.
+        </p>
+
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col">
+              <div class="demo-box">col</div>
+            </div>
+            <div class="col">
+              <div class="demo-box">col</div>
+            </div>
+            <div class="col">
+              <div class="demo-box">col</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="demo-box">col</div>
+            </div>
+            <div class="col">
+              <div class="demo-box">col</div>
+            </div>
+            <div class="col">
+              <div class="demo-box">col</div>
+            </div>
+            <div class="col">
+              <div class="demo-box">col</div>
+            </div>
+            <div class="col">
+              <div class="demo-box">col</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 3: Responsive Breakpoints -->
+      <section class="example-section">
+        <h2>Example 3: Responsive Breakpoints</h2>
+        <p class="description">
+          Columns adapt to different screen sizes using breakpoint classes.
+        </p>
+
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="demo-box">
+                col-12 col-md-6 col-lg-4<br />
+                <small>Mobile: 100% | Tablet: 50% | Desktop: 33%</small>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="demo-box">
+                col-12 col-md-6 col-lg-4<br />
+                <small>Mobile: 100% | Tablet: 50% | Desktop: 33%</small>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="demo-box">
+                col-12 col-md-12 col-lg-4<br />
+                <small>Mobile: 100% | Tablet: 100% | Desktop: 33%</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 4: Container Types -->
+      <section class="example-section">
+        <h2>Example 4: Container Types</h2>
+        <p class="description">Bootstrap provides different container types.</p>
+
+        <div class="container mb-3">
+          <div class="row">
+            <div class="col-12">
+              <div class="demo-box container-demo">
+                .container - Fixed max-width at each breakpoint
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="demo-box container-demo">
+                .container-fluid - 100% width at all breakpoints
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 5: Column Offsetting -->
+      <section class="example-section">
+        <h2>Example 5: Column Offsetting</h2>
+        <p class="description">
+          Use offset classes to push columns to the right.
+        </p>
+
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col-4 offset-4">
+              <div class="demo-box">col-4 offset-4 (centered)</div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-3 offset-3">
+              <div class="demo-box">col-3 offset-3</div>
+            </div>
+            <div class="col-3 offset-3">
+              <div class="demo-box">col-3 offset-3</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6 offset-md-3">
+              <div class="demo-box">col-6 offset-md-3 (responsive offset)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 6: Nesting Grids -->
+      <section class="example-section">
+        <h2>Example 6: Nesting Grids</h2>
+        <p class="description">You can nest rows and columns within columns.</p>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="demo-box parent-box">
+                Parent Column (col-md-8)
+                <div class="row mt-3">
+                  <div class="col-6">
+                    <div class="demo-box nested-box">Nested col-6</div>
+                  </div>
+                  <div class="col-6">
+                    <div class="demo-box nested-box">Nested col-6</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="demo-box sidebar-box">Sidebar (col-md-4)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 7: Column Ordering -->
+      <section class="example-section">
+        <h2>Example 7: Column Ordering</h2>
+        <p class="description">
+          Change the visual order of columns using order classes.
+        </p>
+
+        <div class="container">
+          <div class="row">
+            <div class="col order-3">
+              <div class="demo-box">First in DOM (order-3)</div>
+            </div>
+            <div class="col order-1">
+              <div class="demo-box">Second in DOM (order-1)</div>
+            </div>
+            <div class="col order-2">
+              <div class="demo-box">Third in DOM (order-2)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 8: Alignment -->
+      <section class="example-section">
+        <h2>Example 8: Vertical Alignment</h2>
+        <p class="description">Align columns vertically within a row.</p>
+
+        <div class="container">
+          <div class="row align-items-start tall-row mb-3">
+            <div class="col-4">
+              <div class="demo-box">align-items-start</div>
+            </div>
+            <div class="col-4">
+              <div class="demo-box">align-items-start</div>
+            </div>
+            <div class="col-4">
+              <div class="demo-box">align-items-start</div>
+            </div>
+          </div>
+
+          <div class="row align-items-center tall-row mb-3">
+            <div class="col-4">
+              <div class="demo-box">align-items-center</div>
+            </div>
+            <div class="col-4">
+              <div class="demo-box">align-items-center</div>
+            </div>
+            <div class="col-4">
+              <div class="demo-box">align-items-center</div>
+            </div>
+          </div>
+
+          <div class="row align-items-end tall-row">
+            <div class="col-4">
+              <div class="demo-box">align-items-end</div>
+            </div>
+            <div class="col-4">
+              <div class="demo-box">align-items-end</div>
+            </div>
+            <div class="col-4">
+              <div class="demo-box">align-items-end</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 9: Horizontal Alignment -->
+      <section class="example-section">
+        <h2>Example 9: Horizontal Alignment</h2>
+        <p class="description">
+          Align columns horizontally using justify-content classes.
+        </p>
+
+        <div class="container">
+          <div class="row justify-content-start mb-3">
+            <div class="col-4">
+              <div class="demo-box">justify-content-start</div>
+            </div>
+            <div class="col-4">
+              <div class="demo-box">justify-content-start</div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center mb-3">
+            <div class="col-4">
+              <div class="demo-box">justify-content-center</div>
+            </div>
+            <div class="col-4">
+              <div class="demo-box">justify-content-center</div>
+            </div>
+          </div>
+
+          <div class="row justify-content-end mb-3">
+            <div class="col-4">
+              <div class="demo-box">justify-content-end</div>
+            </div>
+            <div class="col-4">
+              <div class="demo-box">justify-content-end</div>
+            </div>
+          </div>
+
+          <div class="row justify-content-between">
+            <div class="col-4">
+              <div class="demo-box">justify-content-between</div>
+            </div>
+            <div class="col-4">
+              <div class="demo-box">justify-content-between</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 10: Practical Layout -->
+      <section class="example-section">
+        <h2>Example 10: Practical Website Layout</h2>
+        <p class="description">
+          A complete responsive page layout using Bootstrap grid.
+        </p>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="demo-box header-box">Header / Navigation</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-3">
+              <div class="demo-box sidebar-box">
+                Sidebar<br />
+                <small>Full width on mobile, 25% on desktop</small>
+              </div>
+            </div>
+            <div class="col-12 col-lg-9">
+              <div class="demo-box main-content-box">
+                Main Content Area<br />
+                <small>Full width on mobile, 75% on desktop</small>
+
+                <div class="row mt-3">
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="demo-box card-box">Card 1</div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="demo-box card-box">Card 2</div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="demo-box card-box">Card 3</div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="demo-box card-box">Card 4</div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="demo-box card-box">Card 5</div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="demo-box card-box">Card 6</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="demo-box footer-box">Footer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

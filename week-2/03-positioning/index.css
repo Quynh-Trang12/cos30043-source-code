@@ -1,0 +1,484 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 200vh;
+  /* Allow scrolling to test fixed/sticky positioning */
+  padding: 80px 20px 20px 20px;
+  /* Top padding for fixed nav */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: #667eea;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.example {
+  margin-bottom: 50px;
+  padding: 25px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.description {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.note {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #fff3cd;
+  border-left: 3px solid #ffc107;
+  font-style: italic;
+  color: #856404;
+  border-radius: 4px;
+}
+
+.box {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Example 1: Static Positioning */
+.static-demo {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.static-box {
+  position: static;
+  background-color: #4a90e2;
+  color: white;
+}
+
+.static-box:hover {
+  background-color: #357abd;
+  transform: scale(1.02);
+}
+
+/* Example 2: Relative Positioning */
+.relative-demo {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 250px;
+}
+
+.normal-box {
+  background-color: #95e1d3;
+  color: #333;
+}
+
+.relative-box {
+  position: relative;
+  top: 20px;
+  left: 30px;
+  background-color: #ff6b6b;
+  color: white;
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+.relative-box:hover {
+  top: 25px;
+  left: 35px;
+}
+
+/* Example 3: Absolute Positioning */
+.absolute-container {
+  position: relative;
+  /* This becomes the positioning context */
+  background-color: white;
+  min-height: 400px;
+  border-radius: 8px;
+  padding: 20px;
+  border: 2px dashed #667eea;
+}
+
+.absolute-box {
+  position: absolute;
+  background-color: #a29bfe;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.absolute-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(162, 155, 254, 0.4);
+}
+
+.absolute-top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.absolute-top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.absolute-bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.absolute-bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+.absolute-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absolute-center:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Example 4: Fixed Positioning */
+.fixed-demo {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.scroll-content {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.scroll-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Example 5: Sticky Positioning */
+.sticky-demo {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 60px;
+  /* Below the fixed nav */
+  background-color: #fd79a8;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-content {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.sticky-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Example 6: Modal */
+.open-modal-btn {
+  padding: 12px 30px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.open-modal-btn:hover {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #333;
+  transform: rotate(90deg);
+}
+
+.modal-content p {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.modal-action-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-action-btn:hover {
+  background-color: #5568d3;
+}
+
+/* Example 7: Z-Index */
+.zindex-demo {
+  position: relative;
+  background-color: white;
+  min-height: 300px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.overlap-box {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.box-1 {
+  top: 20px;
+  left: 20px;
+  background-color: #ff6b6b;
+  z-index: 1;
+}
+
+.box-2 {
+  top: 60px;
+  left: 80px;
+  background-color: #4ecdc4;
+  z-index: 2;
+}
+
+.box-3 {
+  top: 100px;
+  left: 140px;
+  background-color: #45b7d1;
+  z-index: 3;
+}
+
+.overlap-box:hover {
+  z-index: 10 !important;
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Fixed Navigation Bar */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2d3436;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #667eea;
+}
+
+/* Fixed Back to Top Button */
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top:hover {
+  background-color: #5568d3;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 70px 10px 10px 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .nav-content {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .absolute-container {
+    min-height: 500px;
+  }
+
+  .overlap-box {
+    width: 150px;
+    height: 120px;
+    font-size: 0.9em;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}

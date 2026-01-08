@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>CSS Display Property Demo</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Display Property Demonstration</h1>
+
+      <!-- Example 1: Block vs Inline -->
+      <section class="example">
+        <h2>Example 1: Block vs Inline Elements</h2>
+
+        <h3>Block Elements (display: block)</h3>
+        <div class="block-demo">
+          <div class="block">Block Element 1</div>
+          <div class="block">Block Element 2</div>
+          <div class="block">Block Element 3</div>
+        </div>
+        <p class="note">
+          Block elements take full width and start on a new line.
+        </p>
+
+        <h3>Inline Elements (display: inline)</h3>
+        <div class="inline-demo">
+          <span class="inline">Inline 1</span>
+          <span class="inline">Inline 2</span>
+          <span class="inline">Inline 3</span>
+          <span class="inline">Inline 4</span>
+        </div>
+        <p class="note">
+          Inline elements only take necessary width and flow horizontally.
+        </p>
+      </section>
+
+      <!-- Example 2: Inline-Block -->
+      <section class="example">
+        <h2>Example 2: Inline-Block Elements</h2>
+        <p>
+          Inline-block combines features of both: flows horizontally but
+          respects width/height.
+        </p>
+
+        <div class="inline-block-demo">
+          <div class="inline-block">Box 1<br />100px wide</div>
+          <div class="inline-block">Box 2<br />150px wide</div>
+          <div class="inline-block">Box 3<br />120px wide</div>
+        </div>
+      </section>
+
+      <!-- Example 3: Display None vs Visibility Hidden -->
+      <section class="example">
+        <h2>Example 3: Hiding Elements</h2>
+
+        <div class="hiding-demo">
+          <div class="box-visible">Visible Box</div>
+          <div class="box-hidden">
+            Hidden with visibility: hidden (takes space)
+          </div>
+          <div class="box-none">Hidden with display: none (no space)</div>
+          <div class="box-visible">Another Visible Box</div>
+        </div>
+
+        <button onclick="toggleDisplay()" class="toggle-btn">
+          Toggle Hidden Elements
+        </button>
+      </section>
+
+      <!-- Example 4: Flex Display -->
+      <section class="example">
+        <h2>Example 4: Flex Display (Modern Layout)</h2>
+        <p>Flexbox provides powerful layout capabilities.</p>
+
+        <div class="flex-demo">
+          <div class="flex-item">Flex Item 1</div>
+          <div class="flex-item">Flex Item 2</div>
+          <div class="flex-item">Flex Item 3</div>
+        </div>
+      </section>
+
+      <!-- Example 5: Grid Display -->
+      <section class="example">
+        <h2>Example 5: Grid Display (Modern Layout)</h2>
+        <p>CSS Grid enables two-dimensional layouts.</p>
+
+        <div class="grid-demo">
+          <div class="grid-item">Grid 1</div>
+          <div class="grid-item">Grid 2</div>
+          <div class="grid-item">Grid 3</div>
+          <div class="grid-item">Grid 4</div>
+          <div class="grid-item">Grid 5</div>
+          <div class="grid-item">Grid 6</div>
+        </div>
+      </section>
+
+      <!-- Example 6: Practical Use Case -->
+      <section class="example">
+        <h2>Example 6: Practical Navigation Menu</h2>
+
+        <nav class="navbar">
+          <div class="nav-brand">MyWebsite</div>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#services">Services</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+
+    <script>
+      // Toggle display of hidden elements
+      function toggleDisplay() {
+        const hiddenBox = document.querySelector(".box-hidden");
+        const noneBox = document.querySelector(".box-none");
+
+        if (hiddenBox.style.visibility === "visible") {
+          hiddenBox.style.visibility = "hidden";
+          noneBox.style.display = "none";
+        } else {
+          hiddenBox.style.visibility = "visible";
+          noneBox.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

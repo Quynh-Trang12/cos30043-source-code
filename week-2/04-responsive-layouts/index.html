@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Responsive Layout Demo</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <h1>Responsive Layout Techniques</h1>
+
+      <!-- Example 1: Fixed Layout -->
+      <section class="example-section">
+        <h2>Example 1: Fixed Layout</h2>
+        <p class="description">
+          Fixed layouts use absolute units (pixels) and don't adapt to screen
+          size.
+        </p>
+
+        <div class="layout-demo fixed-layout">
+          <header class="demo-header">Fixed Header (960px)</header>
+          <div class="demo-content">
+            <aside class="demo-sidebar">Fixed Sidebar (200px)</aside>
+            <main class="demo-main">
+              <h3>Fixed Main Content (760px)</h3>
+              <p>
+                This layout has a fixed width of 960px. It won't resize with the
+                browser window.
+              </p>
+              <p><strong>Pros:</strong> Precise control over layout</p>
+              <p>
+                <strong>Cons:</strong> May not fit all screen sizes, horizontal
+                scrolling on small screens
+              </p>
+            </main>
+          </div>
+          <footer class="demo-footer">Fixed Footer (960px)</footer>
+        </div>
+      </section>
+
+      <!-- Example 2: Fluid Layout -->
+      <section class="example-section">
+        <h2>Example 2: Fluid Layout</h2>
+        <p class="description">
+          Fluid layouts use relative units (percentages) and adapt to screen
+          size.
+        </p>
+
+        <div class="layout-demo fluid-layout">
+          <header class="demo-header">Fluid Header (100%)</header>
+          <div class="demo-content">
+            <aside class="demo-sidebar">Fluid Sidebar (25%)</aside>
+            <main class="demo-main">
+              <h3>Fluid Main Content (75%)</h3>
+              <p>
+                This layout uses percentages and adapts to the browser window
+                size.
+              </p>
+              <p><strong>Pros:</strong> Adapts to different screen sizes</p>
+              <p>
+                <strong>Cons:</strong> Less precise control, may become too wide
+                or narrow
+              </p>
+            </main>
+          </div>
+          <footer class="demo-footer">Fluid Footer (100%)</footer>
+        </div>
+      </section>
+
+      <!-- Example 3: Responsive Mobile-First Layout -->
+      <section class="example-section">
+        <h2>Example 3: Responsive Mobile-First Layout</h2>
+        <p class="description">
+          Mobile-first design starts with mobile styles and progressively
+          enhances for larger screens.
+        </p>
+
+        <div class="layout-demo responsive-layout">
+          <header class="demo-header">Responsive Header</header>
+          <div class="demo-content">
+            <aside class="demo-sidebar">
+              <h4>Sidebar</h4>
+              <ul>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+              </ul>
+            </aside>
+            <main class="demo-main">
+              <h3>Responsive Main Content</h3>
+              <p>This layout adapts based on screen size:</p>
+              <ul>
+                <li>
+                  <strong>Mobile (&lt;768px):</strong> Single column, sidebar
+                  below content
+                </li>
+                <li>
+                  <strong>Tablet (≥768px):</strong> Two columns, sidebar 30%
+                  width
+                </li>
+                <li>
+                  <strong>Desktop (≥1024px):</strong> Optimized spacing, sidebar
+                  25% width
+                </li>
+              </ul>
+              <p>Resize your browser window to see the layout change!</p>
+            </main>
+          </div>
+          <footer class="demo-footer">Responsive Footer</footer>
+        </div>
+      </section>
+
+      <!-- Example 4: Media Queries Demonstration -->
+      <section class="example-section">
+        <h2>Example 4: Media Queries in Action</h2>
+        <p class="description">
+          Media queries allow different styles for different screen sizes.
+        </p>
+
+        <div class="media-query-demo">
+          <div class="breakpoint-indicator">
+            <div class="indicator mobile">Mobile (&lt;576px)</div>
+            <div class="indicator tablet">Tablet (576px - 768px)</div>
+            <div class="indicator desktop">Desktop (768px - 1024px)</div>
+            <div class="indicator large">Large Desktop (≥1024px)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 5: Responsive Grid -->
+      <section class="example-section">
+        <h2>Example 5: Responsive Grid Layout</h2>
+        <p class="description">
+          A flexible grid that adapts to different screen sizes.
+        </p>
+
+        <div class="responsive-grid">
+          <div class="grid-item">
+            <h4>Item 1</h4>
+            <p>Responsive grid item</p>
+          </div>
+          <div class="grid-item">
+            <h4>Item 2</h4>
+            <p>Responsive grid item</p>
+          </div>
+          <div class="grid-item">
+            <h4>Item 3</h4>
+            <p>Responsive grid item</p>
+          </div>
+          <div class="grid-item">
+            <h4>Item 4</h4>
+            <p>Responsive grid item</p>
+          </div>
+          <div class="grid-item">
+            <h4>Item 5</h4>
+            <p>Responsive grid item</p>
+          </div>
+          <div class="grid-item">
+            <h4>Item 6</h4>
+            <p>Responsive grid item</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 6: Responsive Images -->
+      <section class="example-section">
+        <h2>Example 6: Responsive Images</h2>
+        <p class="description">
+          Images that scale appropriately for different screen sizes.
+        </p>
+
+        <div class="responsive-images">
+          <div class="image-container">
+            <div class="placeholder-image">
+              <span>Responsive Image</span>
+              <p>max-width: 100%</p>
+            </div>
+          </div>
+          <div class="image-container">
+            <div class="placeholder-image">
+              <span>Responsive Image</span>
+              <p>max-width: 100%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 7: Container with Max-Width -->
+      <section class="example-section">
+        <h2>Example 7: Container with Max-Width</h2>
+        <p class="description">
+          Combines fluid and fixed approaches for optimal readability.
+        </p>
+
+        <div class="max-width-demo">
+          <div class="constrained-container">
+            <h3>Constrained Container</h3>
+            <p>This container has:</p>
+            <ul>
+              <li>width: 90% (fluid on small screens)</li>
+              <li>max-width: 1200px (prevents becoming too wide)</li>
+              <li>margin: 0 auto (centers the container)</li>
+            </ul>
+            <p>This is a common pattern for modern responsive websites.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Screen Size Indicator -->
+    <div class="screen-indicator">
+      <span id="screenSize"></span>
+    </div>
+
+    <script>
+      // Display current screen width
+      function updateScreenSize() {
+        const width = window.innerWidth;
+        const screenSize = document.getElementById("screenSize");
+        screenSize.textContent = `Screen Width: ${width}px`;
+      }
+
+      // Update on load and resize
+      updateScreenSize();
+      window.addEventListener("resize", updateScreenSize);
+    </script>
+  </body>
+</html>

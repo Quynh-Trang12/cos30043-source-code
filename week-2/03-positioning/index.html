@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>CSS Positioning Demo</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Positioning Demonstration</h1>
+
+      <!-- Example 1: Static Positioning (Default) -->
+      <section class="example">
+        <h2>Example 1: Static Positioning (Default)</h2>
+        <p class="description">
+          Static is the default positioning. Elements follow normal document
+          flow.
+        </p>
+
+        <div class="static-demo">
+          <div class="box static-box">Box 1 (static)</div>
+          <div class="box static-box">Box 2 (static)</div>
+          <div class="box static-box">Box 3 (static)</div>
+        </div>
+        <p class="note">
+          These boxes are positioned in normal flow, top to bottom.
+        </p>
+      </section>
+
+      <!-- Example 2: Relative Positioning -->
+      <section class="example">
+        <h2>Example 2: Relative Positioning</h2>
+        <p class="description">
+          Relative positioning offsets an element from its normal position while
+          preserving its space.
+        </p>
+
+        <div class="relative-demo">
+          <div class="box normal-box">Normal Box 1</div>
+          <div class="box relative-box">
+            Relative Box<br />
+            <small>(offset: top: 20px, left: 30px)</small>
+          </div>
+          <div class="box normal-box">Normal Box 2</div>
+        </div>
+        <p class="note">
+          Notice the space is preserved where the relative box would normally
+          be.
+        </p>
+      </section>
+
+      <!-- Example 3: Absolute Positioning -->
+      <section class="example">
+        <h2>Example 3: Absolute Positioning</h2>
+        <p class="description">
+          Absolute positioning removes element from normal flow and positions it
+          relative to nearest positioned ancestor.
+        </p>
+
+        <div class="absolute-container">
+          <div class="box normal-box">Normal Box</div>
+          <div class="absolute-box absolute-top-left">
+            Top Left<br />
+            <small>(top: 10px, left: 10px)</small>
+          </div>
+          <div class="absolute-box absolute-top-right">
+            Top Right<br />
+            <small>(top: 10px, right: 10px)</small>
+          </div>
+          <div class="absolute-box absolute-bottom-left">
+            Bottom Left<br />
+            <small>(bottom: 10px, left: 10px)</small>
+          </div>
+          <div class="absolute-box absolute-bottom-right">
+            Bottom Right<br />
+            <small>(bottom: 10px, right: 10px)</small>
+          </div>
+          <div class="absolute-box absolute-center">
+            Centered<br />
+            <small>(top: 50%, left: 50%)</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 4: Fixed Positioning -->
+      <section class="example">
+        <h2>Example 4: Fixed Positioning</h2>
+        <p class="description">
+          Fixed positioning is relative to the viewport and stays in place when
+          scrolling.
+        </p>
+
+        <div class="fixed-demo">
+          <p>Scroll down to see the fixed elements in action!</p>
+          <div class="scroll-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 5: Sticky Positioning -->
+      <section class="example">
+        <h2>Example 5: Sticky Positioning</h2>
+        <p class="description">
+          Sticky positioning is a hybrid of relative and fixed. It acts relative
+          until a scroll threshold, then becomes fixed.
+        </p>
+
+        <div class="sticky-demo">
+          <div class="sticky-header">Sticky Header (scroll to see effect)</div>
+          <div class="sticky-content">
+            <p>
+              Content section 1: Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+            <p>
+              Content section 2: Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+            <p>
+              Content section 3: Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris.
+            </p>
+            <p>
+              Content section 4: Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 6: Practical Use Case - Modal -->
+      <section class="example">
+        <h2>Example 6: Practical Use Case - Modal Dialog</h2>
+        <p class="description">
+          Combining positioning techniques to create a modal dialog.
+        </p>
+
+        <button onclick="openModal()" class="open-modal-btn">Open Modal</button>
+
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>Modal Dialog</h3>
+            <p>
+              This modal uses fixed positioning to stay centered on the screen.
+            </p>
+            <p>
+              The overlay uses absolute positioning to cover the entire
+              viewport.
+            </p>
+            <button onclick="closeModal()" class="modal-action-btn">
+              Close
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 7: Z-Index -->
+      <section class="example">
+        <h2>Example 7: Z-Index (Stacking Order)</h2>
+        <p class="description">
+          Z-index controls the stacking order of positioned elements.
+        </p>
+
+        <div class="zindex-demo">
+          <div class="overlap-box box-1">Box 1 (z-index: 1)</div>
+          <div class="overlap-box box-2">Box 2 (z-index: 2)</div>
+          <div class="overlap-box box-3">Box 3 (z-index: 3)</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="fixed-nav">
+      <div class="nav-content">
+        <span class="nav-brand">Fixed Navigation</span>
+        <div class="nav-links">
+          <a href="#top">Top</a>
+          <a href="#middle">Middle</a>
+          <a href="#bottom">Bottom</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Fixed Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+      // Modal functions
+      function openModal() {
+        document.getElementById("modal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        const modal = document.getElementById("modal");
+        if (event.target === modal) {
+          closeModal();
+        }
+      };
+
+      // Scroll to top function
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // Show/hide back to top button based on scroll position
+      window.onscroll = function () {
+        const backToTopBtn = document.querySelector(".back-to-top");
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          backToTopBtn.style.display = "flex";
+        } else {
+          backToTopBtn.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
