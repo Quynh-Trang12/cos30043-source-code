@@ -8,6 +8,8 @@
         <router-link to="/props">Props</router-link>
         <router-link to="/directives">Directives</router-link>
         <router-link to="/user/1">User Profile</router-link>
+        <router-link to="/router-demo">Router Demo</router-link>
+        <router-link to="/blog">Blog</router-link>
       </div>
     </nav>
 
